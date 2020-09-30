@@ -28,9 +28,9 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets
-  input_to_index
-  if input_to_index == position_taken?(false)
+  input = gets.strip
+  input_to_index(input)
+  if input_to_index(input) == position_taken?(false)
     move
   else
     turn
