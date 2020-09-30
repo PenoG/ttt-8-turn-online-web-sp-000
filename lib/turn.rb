@@ -25,10 +25,3 @@ end
 def move (board, index, current_Player = "X")
   board[index] = current_Player
 end
-
-def turn 
-  "Please enter 1-9:"
-  user_input.gets
-  input_to_index
-  valid_move
-end
