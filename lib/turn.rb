@@ -7,7 +7,11 @@ def display_board(board)
 end
 
 def valid_move?(board, index)
-  position.to_i.between?(0,8) && !position_taken?(board, position.to_i-1)
+  if index.between?(0,8) 
+    if !position_taken?(board, index)
+      true
+    end
+  end
 end
 
 def position_taken?(board, index)
